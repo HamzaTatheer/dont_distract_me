@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Dont Distract Me",
+    "version": "1",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "description": "Dont Distract Me makes sure that you focus on your task and do not get distracted",
+    "permissions": ["activeTab", "scripting","storage"],
+
+    "content_scripts": [
+        {
+            "matches": ["https://*.youtube.com/"],
+            "js": ["block_youtube.js"]
+        }
+    ]
+}
